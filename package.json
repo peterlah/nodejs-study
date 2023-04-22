@@ -1,0 +1,22 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "nodejs 공부하는 프로젝트",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/peterlah/nodejs-study.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/peterlah/nodejs-study/issues"
+  },
+  "homepage": "https://github.com/peterlah/nodejs-study#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

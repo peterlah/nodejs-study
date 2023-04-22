@@ -53,15 +53,34 @@ class Unit {
 
 	healing(value) {
 		const currentHp = this.hp
-		if (currentHp < 100) {
-			this.hp += (currentHp + value) % 100
+		if (currentHp === 0) {
+			return this.hp
+		}
+		this.hp += value;
+		if (currentHp >= 100) {
+			this.hp = 100;
 		}
 	}
 
 	damaged(value) {
 		const currentHp = this.hp
-		if (currentHp > 0) {
-			this.hp -= (currentHp - val)
+		const damagedHp = currentHp - value
+		if (currentHp === 0) {
+			return;
+		}
+		this.hp -= value
+		if (damagedHp <= 0) {
+			this.hp = 0
 		}
 	}
 }
+
+const unit = new Unit("유닛", 100);
+unit.damaged(70); // 30
+console.log(unit)
+unit.healing(10); // 40
+console.log(unit)
+unit.damaged(50); // 0
+console.log(unit)
+unit.healing(100); // 0
+console.log(unit)
