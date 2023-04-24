@@ -18,5 +18,6 @@
   "homepage": "https://github.com/peterlah/nodejs-study#readme",
   "dependencies": {
     "express": "^4.18.2"
-  }
+  },
+  "type":"commonjs"
 }
